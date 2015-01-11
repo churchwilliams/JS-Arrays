@@ -218,12 +218,21 @@ for(var i = 0; i < num1; i++){
   arr1.push(i);
 }
 for(var i = 0; i < num2; i++){
-  arr2.push(i);
+  arr2.push(i); 
 }
 //Above is some code that adds a random number to both arr1 and arr2.
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
-  //Code Here
+var whichIsLongest = function(arr1, arr2) {
+  var arr1Length = arr1.length;
+  var arr2Length = arr2.length;
+  if (arr1Length > arr2Length) {
+    return "arr1 is the longest!";
+  }
+  else {
+    return "arr2 is the longest!"
+  }
+};
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
@@ -231,4 +240,8 @@ for(var i = 0; i < num2; i++){
   'both' should return a new array full of numbers that are found in both arr1 and arr2.
 */
 
-  //Code Here
+var both = function(arr1, arr2) {
+  var concatArray = [];
+  concatArray.push(arr1, arr2);
+  return concatArray;
+};
